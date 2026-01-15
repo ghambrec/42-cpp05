@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:42 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/15 10:32:43 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/15 10:43:12 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,13 @@ class Bureaucrat
 		// exception classes
 		class GradeTooHighException : public std::exception
 		{
-			const char* what(void) const noexcept override;
+			public:
+				const char* what(void) const noexcept override;
 		};
 		class GradeTooLowException : public std::exception
 		{
-			const char* what(void) const noexcept override;
+			public:
+				const char* what(void) const noexcept override;
 		};
 };
 
