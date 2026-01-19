@@ -6,11 +6,13 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:20 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 22:43:43 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 23:15:51 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
+#include <random>
 
 #include "../inc/AForm.hpp"
 

@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:54 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 22:47:26 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 22:57:31 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ PresidentialPardonForm::~PresidentialPardonForm() {}
 
 void PresidentialPardonForm::startExecute(void) const
 {
-	std::cout << "TODO\n";
+	std::cout	<< this->target_
+				<< " has been pardoned by Zaphod Beeblebrox.\n";
 }

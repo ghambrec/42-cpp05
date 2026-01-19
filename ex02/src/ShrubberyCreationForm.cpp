@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:54 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 22:21:34 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 23:28:32 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,23 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void ShrubberyCreationForm::startExecute(void) const
 {
-	std::cout << "TODO\n";
+	std::string filename = this->target_ + "_shrubbery";
+
+	std::ofstream output(filename);
+	if (!output.is_open())
+		throw std::runtime_error("Couldn't open shrubbery file: " + filename);
+	
+	output <<
+	"              &&& &&  & &&\n"
+	"          && &\\/&\\|& ()|/ @, &&\n"
+	"          &\\/(/&/&||/& /_/)_&/_&\n"
+	"       &() &\\/&|()|/&\\/ '%\" & ()\n"
+	"      &_\\_&&_\\ |& |&&/&__%_/_& &&\n"
+	"    &&   && & &| &| /& & % ()& /&&\n"
+	"     ()&_---()&\\&\\|&&-&&--%---()~\n"
+	"         &&     \\|||\n"
+	"                 |||\n"
+	"                 |||\n"
+	"                 |||\n"
+	"           , -=-~  .-^- _\n";
 }

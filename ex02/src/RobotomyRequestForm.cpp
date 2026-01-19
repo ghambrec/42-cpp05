@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:54 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 22:47:01 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 23:15:49 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,12 @@ RobotomyRequestForm::~RobotomyRequestForm() {}
 
 void RobotomyRequestForm::startExecute(void) const
 {
-	std::cout << "TODO\n";
+	std::cout << "drrrrrbrrrrrdrrrrrr\n";
+
+    static std::mt19937 gen{std::random_device{}()};
+    std::uniform_int_distribution<int> dist(0, 1);
+    if (dist(gen) == 0)
+		std::cout << this->target_ << " has been robotomized successfully!\n";
+	else
+		std::cout << this->target_ << " couldn't be robotomized!\n";
 }

@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:41 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 22:48:40 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 23:28:23 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,11 @@ int main(void)
 		std::cout << ba;
 		std::cout << bb;
 
-		RobotomyRequestForm a("target");
+		ShrubberyCreationForm a("7");
 		std::cout << a;
 		// a.execute(bb);
-		bb.signForm(a);
-		bb.executeForm(a);
-
+		ba.signForm(a);
+		ba.executeForm(a);
 
 		
 	}
