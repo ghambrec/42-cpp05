@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 17:33:41 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 17:46:02 by ghambrec         ###   ########.fr       */
+/*   Created: 2026/01/19 16:12:20 by ghambrec          #+#    #+#             */
+/*   Updated: 2026/01/19 17:28:54 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "../inc/AForm.hpp"
-#include "../inc/ShrubberyCreationForm.hpp"
 
-int main(void)
+class ShrubberyCreationForm : public AForm
 {
-	try
-	{
-		Bureaucrat ba("Jack", 1);
-		Bureaucrat bb("Bob", 150);
-		std::cout << ba;
-		std::cout << bb;
+	private:
+		std::string target_;
 
-		ShrubberyCreationForm a("target");
-		std::cout << a;
-		a.execute(ba);
-		ba.executeForm(a);
+	public:
+		ShrubberyCreationForm() = delete;
+		ShrubberyCreationForm(const std::string& target);
+		ShrubberyCreationForm(const ShrubberyCreationForm& other);
+		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
+		~ShrubberyCreationForm();
 
-
-		
-	}
-	catch (const std::exception& e)
-	{
-		std::cerr << "Caught Exception: " << e.what() << "\n";
-	}
-}
+		virtual void execute(const Bureaucrat& executor) const override;
+};

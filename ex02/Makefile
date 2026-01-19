@@ -6,7 +6,7 @@
 #    By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/07 10:41:45 by ghambrec          #+#    #+#              #
-#    Updated: 2026/01/19 16:00:17 by ghambrec         ###   ########.fr        #
+#    Updated: 2026/01/19 17:37:07 by ghambrec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ NAME = bureaucrat
 VPATH =	src
 SRCS =	main.cpp \
 		Bureaucrat.cpp \
-		AForm.cpp
+		AForm.cpp \
+		ShrubberyCreationForm.cpp
 
 # obejct files
 OBJ_DIR = obj

@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 13:30:38 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 16:02:08 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:27:31 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AForm
 		AForm(const std::string& name, int gradeSign, int gradeExecute);
 		AForm(const AForm& other);
 		AForm& operator=(const AForm& other);
-		~AForm();
+		virtual ~AForm();
 
 		// getter
 		const std::string& getName(void) const;
@@ -40,6 +40,7 @@ class AForm
 
 		// actions
 		void beSigned(const Bureaucrat& b);
+		virtual void execute(const Bureaucrat& executor) const = 0;
 
 		// exception classes
 		class GradeTooHighException : public std::exception

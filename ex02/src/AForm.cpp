@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 13:30:18 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 16:03:24 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:36:04 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,8 @@ std::ostream& operator<<(std::ostream& os, const AForm& form)
 		<< ", gradeSign:"
 		<< form.getGradeSign()
 		<< ", gradeExecute:"
-		<< form.getGradeExecute();
+		<< form.getGradeExecute()
+		<< "\n";
 
 	return (os);
 }

@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:42 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 16:00:36 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:41:48 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ class Bureaucrat
 
 		// actions
 		void signForm(AForm& form) const;
+		void executeForm(const AForm& form) const;
 		
 		// exception classes
 		class GradeTooHighException : public std::exception
