@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 13:30:38 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 17:27:31 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 22:28:15 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class AForm
 		static constexpr int bestGrade = 1;
 		static constexpr int worstGrade = 150;
 
+	protected:
+		virtual void startExecute(void) const = 0;
+
 	public:
 		AForm() = delete;
 		AForm(const std::string& name, int gradeSign, int gradeExecute);
@@ -40,7 +43,7 @@ class AForm
 
 		// actions
 		void beSigned(const Bureaucrat& b);
-		virtual void execute(const Bureaucrat& executor) const = 0;
+		void execute(const Bureaucrat& executor) const;
 
 		// exception classes
 		class GradeTooHighException : public std::exception
@@ -49,6 +52,11 @@ class AForm
 				const char* what(void) const noexcept override;
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				const char* what(void) const noexcept override;
+		};
+		class FormNotSignedException : public std::exception
 		{
 			public:
 				const char* what(void) const noexcept override;

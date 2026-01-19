@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:44 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 17:45:43 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 22:38:11 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,8 @@ void Bureaucrat::executeForm(const AForm& form) const
 		std::cerr	<< this->getName()
 					<< " couldn't execute "
 					<< form.getName()
-					<< ", reason: "
+					<< "! Reason: "
+					<< e.what()
 					<< "\n";
 	}
 }

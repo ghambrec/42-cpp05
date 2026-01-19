@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:54 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 17:37:36 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 22:21:34 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
-void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
+void ShrubberyCreationForm::startExecute(void) const
 {
 	std::cout << "TODO\n";
-	(void) executor;
 }

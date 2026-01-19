@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:20 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 17:28:54 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 22:25:01 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& other);
 		~ShrubberyCreationForm();
 
-		virtual void execute(const Bureaucrat& executor) const override;
+		virtual void startExecute(void) const override;
 };

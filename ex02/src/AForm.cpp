@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 13:30:18 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 17:36:04 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 22:41:00 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ const char* AForm::GradeTooHighException::what(void) const noexcept
 const char* AForm::GradeTooLowException::what(void) const noexcept
 {
 	return ("Form grade is too low!");
+}
+
+const char* AForm::FormNotSignedException::what(void) const noexcept
+{
+	return ("Form is not signed!");
 }
 
 AForm::AForm(const std::string& name, int gradeSign, int gradeExecute)
@@ -91,4 +96,13 @@ void AForm::beSigned(const Bureaucrat& b)
 	if (b.getGrade() > this->getGradeSign())
 		throw GradeTooLowException();
 	this->isSigned_ = true;
+}
+
+void AForm::execute(const Bureaucrat& executor) const
+{
+	if (this->getIsSigned() == false)
+		throw FormNotSignedException();
+	if (executor.getGrade() > this->getGradeExecute())
+		throw GradeTooLowException();
+	this->startExecute();
 }

@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:41 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/19 17:46:02 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/19 22:40:43 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ int main(void)
 
 		ShrubberyCreationForm a("target");
 		std::cout << a;
-		a.execute(ba);
-		ba.executeForm(a);
+		// a.execute(bb);
+		ba.signForm(a);
+		bb.executeForm(a);
 
 
 		
