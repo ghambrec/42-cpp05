@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:41 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/20 08:36:45 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/20 13:22:59 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ int main(void)
 		std::cout << ba;
 		std::cout << bb;
 
-		// try to execute a non signed form
-		std::cout << "### try to execute a non signed form ###\n";
+		// create form
+		std::cout << "### create form ###\n";
 		ShrubberyCreationForm shrub("somewhere");
 		std::cout << shrub;
+		// try to execute a non signed form
+		std::cout << "### try to execute a non signed form ###\n";
 		ba.executeForm(shrub);
 		// try to sign form with lower grade
 		std::cout << "### try to sign form with lower grade ###\n";
