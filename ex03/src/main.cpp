@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:41 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/20 08:36:45 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/20 13:25:58 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "../inc/ShrubberyCreationForm.hpp"
 #include "../inc/RobotomyRequestForm.hpp"
 #include "../inc/PresidentialPardonForm.hpp"
+#include "../inc/Intern.hpp"
 
 int main(void)
 {
@@ -24,38 +25,49 @@ int main(void)
 		std::cout << ba;
 		std::cout << bb;
 
+		// create forms with INTERN worker
+		Intern worker;
+		AForm *presi;
+		AForm *robo;
+		AForm *shrub;
+		presi = worker.makeForm("presidential pardon", "somewho");
+		robo = worker.makeForm("robotomy request", "Gusto");
+		shrub = worker.makeForm("shrubbery creation", "somewhere");		
+		std::cout << *presi;
+		std::cout << *robo;
+		std::cout << *shrub;
+
+		// ### TESTS FROM EX02 ###
+		// create form
 		// try to execute a non signed form
 		std::cout << "### try to execute a non signed form ###\n";
-		ShrubberyCreationForm shrub("somewhere");
-		std::cout << shrub;
-		ba.executeForm(shrub);
+		ba.executeForm(*shrub);
 		// try to sign form with lower grade
 		std::cout << "### try to sign form with lower grade ###\n";
-		bb.signForm(shrub);
+		bb.signForm(*shrub);
 		// sign the form
 		std::cout << "### sign the form ###\n";
-		ba.signForm(shrub);
+		ba.signForm(*shrub);
 		// try to execute a signed form with lower grade
 		std::cout << "### try to execute a signed form with lower grade ###\n";
-		bb.executeForm(shrub);
+		bb.executeForm(*shrub);
 		// execute the form
 		std::cout << "### execute the form ###\n";
-		ba.executeForm(shrub);
+		ba.executeForm(*shrub);
 
 		// tests for presidential and robotomy form
 		std::cout << "### tests for presidential and robotomy form ###\n";
-		RobotomyRequestForm robo("Worker");
-		PresidentialPardonForm presi("Somewho");
-		std::cout << robo;
-		std::cout << presi;
-		ba.signForm(robo);
-		ba.signForm(presi);
-		ba.executeForm(robo);
-		ba.executeForm(robo);
-		ba.executeForm(robo);
-		ba.executeForm(robo);
-		ba.executeForm(robo);
-		ba.executeForm(presi);
+		ba.signForm(*robo);
+		ba.signForm(*presi);
+		ba.executeForm(*robo);
+		ba.executeForm(*robo);
+		ba.executeForm(*robo);
+		ba.executeForm(*robo);
+		ba.executeForm(*robo);
+		ba.executeForm(*presi);
+		
+		AForm *invalid;
+		invalid = worker.makeForm("abc123", "something");
 	}
 	catch (const std::exception& e)
 	{
