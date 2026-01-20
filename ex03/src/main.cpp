@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:41 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/20 13:25:58 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/20 13:29:07 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,11 @@ int main(void)
 		ba.executeForm(*robo);
 		ba.executeForm(*presi);
 		
+		// free forms
+		delete presi;
+		delete robo;
+		delete shrub;
+
 		AForm *invalid;
 		invalid = worker.makeForm("abc123", "something");
 	}
