@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 17:33:41 by ghambrec          #+#    #+#             */
-/*   Updated: 2026/01/20 13:29:07 by ghambrec         ###   ########.fr       */
+/*   Updated: 2026/01/20 13:38:27 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int main(void)
 		std::cout << ba;
 		std::cout << bb;
 
-		// create forms with INTERN worker
+		// create forms with intern worker
+		std::cout << "### create forms with intern worker ###\n";
 		Intern worker;
 		AForm *presi;
 		AForm *robo;
